@@ -1,0 +1,75 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Brown-Pro",Helvetica,Arial,sans-serif;
+}
+
+:root {
+    --cor-principal: rgba(28, 28, 28, 1);
+    --cor-azul: rgba(0, 184, 252, 1);
+    --cor-branca: rgba(244, 244, 244, 1);
+}
+
+body {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+}
+a {
+    text-decoration: none;
+    color: var(--cor-branca);
+    font-weight: 600;
+}
+.header {
+    margin: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(28, 28, 28, 0);
+    position: absolute; /* Foi esse comando que fez o header ficar por cima do vídeo e transparente*/
+    z-index: 200; /*Usei o z-index para que o conteúdo do header fique sobre o vídeo, se não usar esse atributo, o header fica embaixo da .hero e aí não aparece os efeitos no link por exemplo */
+}
+.header__img {
+    height: 4rem;
+    width: auto;
+}
+.header__links {
+    margin-left: 55rem;
+}
+.header__links > a:hover {
+    border-radius: 9999px;
+    background-color: var(--cor-branca);
+    color: var(--cor-principal);
+    padding: 0.35rem 1rem;
+}
+.header__links > a {
+    margin-left: 3rem;
+    padding: 0.35rem 1rem
+}
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.117), rgba(0, 0, 0, 0.979));
+}
+.hero__background {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
+}
+
+.hero__foreground {
+    text-align: center;
+    padding-top: 60vh;
+}
+.hero__foreground-title {
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+.hero__foreground-text {
+    margin-top: 2rem;
+    letter-spacing: .35rem;
+}
+
