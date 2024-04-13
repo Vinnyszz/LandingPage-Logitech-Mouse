@@ -34,7 +34,7 @@ a {
     width: auto;
 }
 .header__links {
-    margin-left: 55rem;
+    padding-left: 55rem;
 }
 .header__links > a:hover {
     border-radius: 9999px;
@@ -73,3 +73,99 @@ a {
     letter-spacing: .35rem;
 }
 
+.section__asside,
+.section {
+    padding: 8rem 8rem;
+    overflow: hidden;
+    background: radial-gradient(rgba(0, 0, 0, 0.117), rgba(0, 0, 0, 0.979))
+}
+
+.section__asside-img {
+    float: left;
+    margin-right: 15rem;
+    object-fit: cover;
+}
+.section__asside-text,
+.section__text {
+    font-size: 1.15rem;
+    line-height: 2rem;
+    margin: 4rem auto;
+    text-align: center;
+}
+.section__asside-text > p, h2 {
+    margin: 2.5rem 0;
+    text-align: justify;
+}
+.section__button {
+    border: 2px solid var(--cor-azul);
+    border-radius: 9999px;
+    padding: 0.65rem 1rem;
+}
+.section__button:hover {
+    background-color: var(--cor-azul);
+}
+
+.section {
+    padding: 0;
+    height: 90vh;
+    position: relative;
+    /* Importante colocar o position:relative; aqui para termos uma referencia para a nossa imagem. Se não tiver esse comando a imagem irá sair da div */
+    /* Isso ocorre porque o posicionamento absoluto é calculado em relação ao elemento pai que tem um posicionamento relativo, no caso, a section. */
+}
+
+.section__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-height: 60rem;
+    position: absolute;
+    z-index: -10;
+}
+.section__text {
+    position: relative;
+    margin-top: 20rem;
+    margin-left: 65rem;
+    margin-right: 10rem;
+    text-align: center;
+    padding-right: 9rem;
+}
+.section__text > h2 {
+    text-transform: uppercase;
+    text-align: left;
+}
+.section__text > h2::after {
+    margin-top: 1rem;
+    content: "";
+    width: 9rem;
+    height: .55rem;
+    background-color: rgb(119, 119, 119);
+    display: block;
+    position: absolute;
+}
+.section__text > p {
+    line-height: 1.45rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.section:nth-child(even) > .section__text {
+    line-height: 1.45rem;
+    margin-bottom: 2.5rem;
+    text-align: right;
+    margin-right: 65rem;
+    margin-left: 10rem;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--cor-principal);
+    margin: 1.25rem;
+}
+.footer__links > a {
+    margin:0 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+.footer__links:nth-child(1) {
+    margin-top: 2rem;
+}
